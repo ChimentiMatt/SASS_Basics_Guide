@@ -1,0 +1,44 @@
+@import "mixins";
+@import "config.scss";
+
+$primary-color: steelblue;
+$primary-font: 1rem;
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    div:nth-child(1){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        background-color: $primary-color;
+        
+        p{
+            color: complement($primary-color);
+            font-size: 2rem;
+        }
+    }
+    div:nth-child(2){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        background-color: wheat;
+        @include mixin-1()
+    }
+
+    div:nth-child(3){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        font-size: funct-font-size($primary-font);
+        color: funct-color($primary-color)
+    }
+}
+
+

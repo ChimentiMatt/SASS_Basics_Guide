@@ -1,0 +1,13 @@
+@function funct-font-size($n){
+    @if ($n > 2) {
+        @return $n;
+    }
+    @else {
+        @return $n * 4;
+    }
+}
+
+@function funct-color($x){
+    @return rgb(76, 190, 82);
+}
+
