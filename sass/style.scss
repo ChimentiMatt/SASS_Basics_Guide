@@ -1,9 +1,6 @@
 @import "mixins";
 @import "config.scss";
-
-$primary-color: steelblue;
-$primary-font: 1rem;
-$font1: sans-serif;
+@import "variables.scss";
 
 *{
     margin:0;
