@@ -3,41 +3,56 @@
 
 $primary-color: steelblue;
 $primary-font: 1rem;
+$font1: sans-serif;
 
 *{
     margin:0;
     padding: 0;
+    font-family: $font1;
 }
 
 body{
     div:nth-child(1){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5rem;
-        background-color: $primary-color;
-        
-        p{
-            color: complement($primary-color);
-            font-size: 2rem;
-        }
-    }
-    div:nth-child(2){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5rem;
+        @include center-center;
         background-color: wheat;
-        @include mixin-1()
+        @include mixin-1();
+        font-size: 3rem;
     }
 
-    div:nth-child(3){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5rem;
+    div:nth-child(2){
+        @include center-center;
         font-size: funct-font-size($primary-font);
+        background: complement(funct-color($primary-color));
         color: funct-color($primary-color)
+    }
+    div:nth-child(3){
+        background-color: $primary-color;
+        @include center-center;
+        p{
+            color: complement($primary-color);
+            font-size: 3rem;
+        }
+    }
+
+    div:nth-child(4){
+        @include center-center;
+        font-size: 3rem;
+        background: adjust-hue(complement($primary-color), 50deg);
+        color: adjust-hue($primary-color, 50deg);
+    }
+
+    div:nth-child(5){
+        @include center-center;
+        font-size: 3rem;
+        background: rgb(216, 216, 216);
+        color: desaturate($primary-color, 10%);
+    }
+
+    div:nth-child(6){
+        @include center-center;
+        font-size: 3rem;
+        background: rgb(203, 252, 255);
+        color: mix(#003cff, #ff0000, 50%);
     }
 }
 
